@@ -238,7 +238,7 @@ Move the certificate you created:
 % mv nick.key ~/.ssl/
 {% endhighlight %}
 
-In older version of emacs (23, 24, 25) you could set up the "tls-program" variable with either one of this two options:
+In older version of Emacs (23, 24, 25) you could set up the "tls-program" variable with either one of this two options:
 {% highlight text %}
 (setq tls-program '("openssl s_client -connect %h:%p -tls1 -ign_eof -cert ~/priv/nick.pem"))
 {% endhighlight %}
@@ -247,7 +247,7 @@ In older version of emacs (23, 24, 25) you could set up the "tls-program" variab
 (setq tls-program '("gnutls-cli --priority secure256 --x509certfile ~/.ssl/nick.pem --x509keyfile ~/.ssl/nick.key
 {% endhighlight %}
 
-More Emacs 26/27 onwards disregard all of the above and just use the snippet of code for your respective Emacs version found at [the
+For newer versions (Emacs 26, 27 and onwards) disregard all of the above and just use the snippet of code for your respective Emacs version found at [the
 EmacsWiki](http://www.emacswiki.org/emacs/ErcSSL).
 
 Then call "M-x erc-tls" and connect to irc.oftc.net, port 6697.
